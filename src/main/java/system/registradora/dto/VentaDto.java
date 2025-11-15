@@ -1,0 +1,15 @@
+package system.registradora.dto;
+
+import java.util.Date;
+import java.util.List;
+
+public record VentaDto(
+        Long id,
+        Date fechaVenta,
+        Double totalVenta,
+        Double descuento,
+        String formaDePago,
+        Long clienteId,
+        List<DetalleVentaDto> detalles // ✅ Lista de productos en la venta
+) {
+}

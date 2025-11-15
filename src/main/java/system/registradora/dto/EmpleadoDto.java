@@ -1,0 +1,9 @@
+package system.registradora.dto;
+
+public record EmpleadoDto(
+        Long id,
+        String nombreEmpleado,
+        String cargo,
+        Long telefono
+) {
+}

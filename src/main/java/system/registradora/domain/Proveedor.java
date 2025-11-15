@@ -1,0 +1,52 @@
+package system.registradora.domain;
+
+import system.registradora.dto.ProveedorDto;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "proveedores")
+@Getter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Proveedor {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(unique = true)
+    private String razonSocial;
+    private String nit;
+    private long telefono;
+
+    @OneToMany(mappedBy = "proveedor", cascade = CascadeType.ALL)
+    private List<Compra> compras = new ArrayList<>();
+
+    /*
+    public Proveedor(){}
+
+    public Proveedor(ProveedorDto datos){
+        this.id = datos.id();
+        this.razonSocial = datos.razonSocial();
+        this.nit = datos.nit();
+        this.telefono = datos.telefono();
+    }
+
+     */
+
+    public void actualizarProveedor (ProveedorDto datos){
+        if (datos.razonSocial() != null && !datos.razonSocial().isBlank()){
+            this.razonSocial = datos.razonSocial();
+        }
+        if (datos.nit() != null && !datos.nit().isBlank()){
+            this.nit = datos.nit();
+        }
+        if (datos.telefono() != null && datos.telefono() != 0){
+            this.telefono = datos.telefono();
+        }
+    }
+}

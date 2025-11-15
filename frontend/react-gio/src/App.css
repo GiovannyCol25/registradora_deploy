@@ -1,0 +1,215 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-main {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.App-header {
+  background-color: #adb5bd;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #21a1f1;
+}
+
+body, html, #root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: none;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1140px;
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* CONTENEDORES Y CARDS */
+.bg-card-dark {
+  background-color: #1e1e2f;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  color: white;
+}
+
+/* CAMPOS INPUT OSCUROS */
+.form-control-dark {
+  background-color: #2a2a3c;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.form-control-dark:focus {
+  background-color: #333;
+  color: white;
+  border-color: #00bfff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 191, 255, 0.45);
+}
+
+/* SELECT OSCURO */
+.form-select-dark {
+  background-color: #2a2a3c;
+  color: #00bfff;
+  border: 1px solid #00bfff;
+}
+
+.form-select-dark:focus {
+  background-color: #333;
+  border-color: #00bfff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 191, 255, 0.4);
+  color: white
+}
+
+input.form-control-dark,
+select.form-select-dark {
+  background-color: white;
+  color: #00bfff;
+  border: 1px solid #00bfff;
+}
+
+input.form-control-dark:focus,
+select.form-select-dark:focus {
+  background-color: #333;
+  color: #00bfff;
+  border-color: #00bfff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 191, 255, 0.4);
+}
+
+.form-control-dark {
+  background-color: #222;
+  color: white;
+  border: 1px solid #444;
+}
+
+.form-control-dark::placeholder {
+  color: #bbb;
+}
+
+.card {
+  border-radius: 8px;
+}
+
+body, html {
+  background: linear-gradient(135deg, #0d6efd, #000000);
+  font-size: 0.9rem; /* Reduce un poco el tamaño de texto general */
+  transform: scale(0.95); /* Escala todo el contenido */
+  transform-origin: top center;
+  background-attachment: fixed; /* ✅ hace que el fondo no se "repita" al hacer scroll */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.input-dark {
+  background-color: #222;
+  color: white;
+  border: 1px solid #555;
+}
+
+.input-dark::placeholder {
+  color: #aaa;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #0d6efd, #000);
+}
+
+.card {
+  border-radius: 8px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+@media (max-width: 576px) {
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table th,
+  .table td {
+    font-size: 11px;
+    padding: 0.3rem;
+    white-space: nowrap;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  li {
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
